@@ -1,4 +1,7 @@
+wget -q -O - https://updates.atomicorp.com/installers/atomic | sudo bash
+apt-get update
 apt-get install ossec-hids-serve
+apt-get install ossec-hids-agent
 /var/ossec/bin/ossec-control status
 /var/ossec/bin/ossec-control start
 service apache2 status
