@@ -18,6 +18,8 @@ RUN  unzip master.zip
 RUN  mv ossec-wui-master /var/www/html/ossec
 RUN  printf "admin\n \n \nwww-data"|/var/www/html/ossec/./setup.sh
 RUN  apt-get install systemd -y
+RUN  echo "\nServerName localhost" >> /etc/apache2/apache2.conf 
+RUN  service apache2 start
 RUN  systemctl restart apache2
 RUN  service apache2 status
 RUN  apt-get update -y
