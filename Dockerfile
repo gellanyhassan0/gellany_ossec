@@ -17,7 +17,7 @@ RUN  apt-get install unzip -y
 RUN  unzip master.zip
 RUN  mv ossec-wui-master /var/www/html/ossec
 RUN  printf "admin\n \n \nwww-data"|/var/www/html/ossec/./setup.sh
-#printf " \n \nlocal\n \n \ngellanyhassan0@gmail.com\ny\ny\ny\ny\nn"|/ossec-hids-3.1.0/./setup.sh
+#printf " \n \nlocal\n \n \ngellanyhassan0@gmail.com\n \n \n \n \n \n "|/ossec-hids-3.1.0/./setup.sh
 RUN  apt-get install systemd -y
 RUN  echo "\nServerName localhost" >> /etc/apache2/apache2.conf 
 RUN  service apache2 start
